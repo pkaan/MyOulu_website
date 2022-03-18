@@ -1,0 +1,453 @@
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3vw;
+    letter-spacing: 0.5vw;
+    position: relative;
+    right: 3.65vw;
+    bottom: 1vw;
+    margin-left: 13vw;
+    margin-bottom: 9vh;
+    margin-right: 0;
+}
+
+h2 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    position: relative;
+    top: 0.9vw;
+    right: 26.7vw;
+    margin-left: 1vw;
+    margin-right: 2vw;
+    margin-bottom: 9vh;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+}
+
+h4{
+    text-align: center;
+    margin-left: 5vw;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+    position: relative;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+}
+
+p {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+    line-height: 1.4;
+}
+
+p2 {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2vw;
+    letter-spacing: 0.1vw;
+    line-height: 1.5;
+}
+
+p2 > p {
+    column-width: auto;
+    column-count: 2;
+}
+
+
+html {height: 100%;}
+
+body {
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vw;
+    height: 100%;
+    margin: 0; 
+    background-color: #ECEFF1;
+}
+
+.outerWrapper {
+    box-sizing: border-box;
+    
+    height: 6vw;
+    background-color: rgb(225, 0, 105);
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 1vh;
+}
+
+div.outerWrapper button {
+    
+    box-sizing: border-box;
+    width: 7vw;
+    padding: 0.2vw;
+    margin:0.2vw;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fa1cc200;
+    font-size: 1.5vw;
+    font-family:'roboto', sans-serif;
+    letter-spacing: 0.2vw;
+    border: none;
+    color: white;
+    border-radius: 4px;
+
+} 
+#siteInstructions, #siteInstructionseng {
+    position: absolute;
+    right: 20.7vw;
+    top: 0.27vw;
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+}
+
+#siteInstructions:hover, #siteInstructionseng:hover {
+    background-color: rgb(175, 174, 174);
+}
+
+#siteInstructions:active, #siteInstructionseng:active {
+    background-color: rgb(175, 174, 174);
+    transform: translateY(2px);
+
+}
+
+#instructions {
+    background-color: rgb(175, 174, 174);
+    padding: 1vw;
+
+}
+
+#kokoVisa, #kokoVisaeng {
+    position: absolute;
+    left: 20.7vw;
+    width: 16vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    color: white;
+    background-color: rgb(2, 133, 11);
+    border: 1px solid;
+    border-color:blanchedalmond;
+}
+
+#kokoVisa:hover, #kokoVisaeng:hover {
+    background-color: rgb(0, 90, 6);
+    color: white;
+} 
+
+#kokoVisa:active, #kokoVisaeng:active {
+    background-color: rgb(0, 90, 6);
+    color: white;
+    box-shadow: 0 0px #666; 
+    transform: translateY(2px);
+
+} 
+
+#slash {
+    margin-left: 0;
+}
+
+#language {
+    position: absolute;
+    top: 1.5vw;
+    left: 50vw;
+}
+
+div.outerWrapper button:hover {
+    background-color: rgb(235, 130, 170);
+}
+
+div.outerWrapper button:active {
+    background-color: rgb(155, 0, 75); 
+    box-shadow: 0 0px #666; 
+    transform: translateY(4px);
+}
+
+#navbar {
+    display: row;
+    position: relative;
+    width: 18vw;
+    margin: 0;
+    right: -70vw;
+}
+
+div.buttons {
+    box-sizing: border-box;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+}
+
+div.buttons button {
+    box-sizing: border-box;
+    width: 18vw;
+    padding: 0.7vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family:'roboto', sans-serif;
+    letter-spacing: 0.2vw;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 0.5vh;
+}
+
+.oulubtn, .oulubtneng {
+    background-color: rgb(218, 61, 14); 
+    border: #441f22be;   
+    box-shadow: 0 2px #999;
+}
+
+.oulubtn:hover, .oulubtneng:hover {
+    background-color: rgb(180, 51, 12);
+}
+.oulubtn:active, .oulubtneng:active {
+    background-color: rgb(180, 51, 12); 
+    box-shadow: 0 0px #666; 
+    transform: translateY(2px);
+}
+.kaupunkibtn, .kaupunkibtneng {
+    background-color: #1c25a1be; 
+    border: white; 
+    box-shadow: 0 2px #999;
+}
+.kaupunkibtneng:hover, .kaupunkibtn:hover {
+    background-color: #121869be;
+}
+.kaupunkibtneng:active, .kaupunkibtn:active {
+    background-color: #121869be; 
+    box-shadow: 0 0px #666; 
+    transform: translateY(2px);
+}
+.kampusbtn, .kampusbtneng {
+    background-color: #8a1567be; 
+    border: white; 
+    box-shadow: 0 2px #999;
+}
+.kampusbtn:hover, .kampusbtneng:hover {
+    background-color: #610f48be;
+}
+.kampusbtn:active, .kampusbtneng:active {
+    background-color: #610f48be; 
+    box-shadow: 0 0px #666; 
+    transform: translateY(2px);
+}
+
+.menuWrapper{
+    box-sizing: border-box;
+    background-color: rgb(218, 61, 14); 
+    width: 18vw;
+    height: 33vw;
+    border-radius: 4px;
+    padding-bottom: 2vh;
+    margin-top: 0.1vh;
+}
+
+div.scrollmenu {
+    box-sizing: border-box;
+    overflow: none;
+    width: 15vw;
+    transition-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+div.scrollmenu a {
+    color: black;
+    width: 15vw;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.2vw;
+    text-align: center;
+    padding: 1vw;
+    border-radius: 4px;
+    display: inline-block;
+    font-family:'Open Sans', sans-serif;
+    font-size: 1.2vw;
+    padding: 0.5vw;
+    margin-left: 0.9vw;
+}
+  
+.kampus, .campus { 
+    border: 2px solid #8a1567be; 
+    background-color: white;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+  
+.kampus:hover, .campus:hover {
+    background-color: #8a1567be; 
+    color: white;
+}
+  
+.city, .kaupunki {
+    border: 2px solid #1c25a1be;
+    background-color: white;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+  
+.city:hover, .kaupunki:hover {
+    background-color: #1c25a1be;
+    color: white;
+} 
+
+#visabtn {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0.4vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-family:'roboto', sans-serif;
+    letter-spacing: 0.2vw;
+    color: black;
+    background-color: #ECEFF1;
+    border-radius: 4px;
+    margin-bottom: 0.5vh;
+    border: 2px solid #fa1cc3be;   
+    box-shadow: 0 2px #999;
+    transition-duration: 0.4s;
+}
+
+#visabtn:hover {
+    color: white; 
+    background-color: #fa1cc2;
+}
+#visabtn:active {
+    background-color: #fa1cc3be; 
+    box-shadow: 0 0px #666; 
+    transform: translateY(2px);
+}
+
+#map {
+    box-sizing: border-box;
+    height: 43vw;
+    width: 60vW;
+    padding: 0px;
+    margin-bottom: 2vh;
+    margin: 0 auto;
+    position: absolute;
+    top: 6.5vw;
+    left: 9.5vw;
+}
+
+#markerImages {
+    width:50%; 
+    float:left; 
+    padding-right:1vw; 
+    position: sticky; 
+    bottom: -1vw; 
+    box-sizing:border-box;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5.5vh; 
+    padding-bottom: 5.5vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    overflow:auto;
+    width: 80%;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-header {
+    padding: 2px 2px;
+    background-color: rgb(225, 0, 105);
+    color: white;
+}
+
+.modal-quiz {
+    padding: 2px 16px; 
+    background-color: white;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(2, 133, 11);
+    color: white;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 2vw;
+    transform: translate(-0.5vw, -0.4vw); 
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#vastausbtn, #vastausbtneng {
+    box-sizing: border-box;
+    width: 20vw;
+    padding: 0.4vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-family:'roboto', sans-serif;
+    letter-spacing: 0.2vw;
+    color: white;
+    background-color: #16cf44;
+    border-radius: 4px;
+    margin-bottom: 1.2vh;
+    border: #441f22be;   
+    box-shadow: 0 2px #999;
+}
+
+#vastausbtn:hover, #vastausbtneng:hover{
+    background-color: #12a537;
+}
+#vastausbtn:active, #vastausbtneng:active{
+    background-color: #12a537;
+    box-shadow: 0 0px #666; 
+    transform: translateY(2px);
+}
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<html lang="eng">
+
+<head>
+    <title>MunKaupunni - opas opiskelijan Ouluun</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="mobile_style.css">
+    <link rel="stylesheet" media="screen and (min-width: 1001px)" href="desktop_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="outerWrapper" id="outerWrapper">
+        <h1 id="title"> MunKaupunni</h1>
+        <h2 id="introductionText">Oppaasi opiskelijan Ouluun!</h2>
+        <div id="language">
+            <button id="siteInstructions" onclick="javascript:openInstructions(1)">Ohje</button>
+            <button id="siteInstructionseng" style="display:none" onclick="javascript:openInstructions(2)">Info</button>
+            <button id="kokoVisa" onclick="quiz(1)">Fuksivisa</button>
+            <button id="kokoVisaeng" style="display:none" onclick="quiz(2)">Freshman Quiz</button>
+            <button class="fi" id="fin" onclick="javascript:loadLang('fi');lista(2)">Suomi</button>
+            <span id="slash"> / </span>
+            <button class="eng" id="en" onclick="javascript:loadLang('eng');lista(4);">English</button>
+        </div>
+    </div>
+
+    <script>
+        function openInstructions(x) {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            modal.style.display = "block";
+            span.onclick = function () {
+                modal.style.display = "none";
+                document.getElementsByClassName("modal-footer")[0].style.visibility = "visible";
+                document.getElementById("quiz").style.display = "block";
+                document.getElementById("results").style.display = "block";
+                document.getElementById("instructions").style.background = "rgb(175, 174, 174)";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    document.getElementsByClassName("modal-footer")[0].style.visibility = "visible";
+                    document.getElementById("quiz").style.display = "block";
+                    document.getElementById("results").style.display = "block";
+                    document.getElementById("instructions").style.background = "rgb(175, 174, 174)";
+                }
+            }
+            document.getElementsByClassName("modal-footer")[0].style.visibility = "hidden";
+            document.getElementById("quiz").style.display = "none";
+            document.getElementById("results").style.display = "none";
+
+            if (x == 1) {
+                x = document.getElementById("modhead");
+                x.innerText = "Tervetuloa MunKaupunniin!";
+
+                x = document.getElementById("instructions");
+                x.style.display = "block";
+                x.style.background = "white";
+                x.innerText = 'MunKaupunni-sivulla voit tutkia, mitä opiskelijan Oulu sisältää.\n' +
+                    '\nAluenapeilla voit kohdistaa kartan eri alueille ja löytää kohteita, joihin tutustua.\n' +
+                    '\nVoit löytää jokaisesta kohteesta sen taustatietoa ja visakysymyksiä.' +
+                    ' Voit testata tietoasi kaikista kohteista painamalla "fuksivisa"-nappia.'
+
+
+            }
+
+            else if (x == 2) {
+                x = document.getElementById("modhead");
+                x.innerText = "Welcome to MunKaupunni!";
+
+                x = document.getElementById("instructions");
+                x.style.display = "block";
+                x.style.background = "white";
+                x.innerText = "On MunKaupunni, you can explore what a student's Oulu has to offer.\n" +
+                    "\nWith the area buttons, you can direct the map to different areas and find destinations" +
+                    " to get acquainted with.\n" +
+                    "\nYou can find background information on every place on the map and answer their quizzes." +
+                    " You can test your knowledge by pressing the Freshman Quiz-button.";
+
+            }
+
+        }
+
+    </script>
+
+    <nav id="navbar">
+
+        <div class="buttons">
+            <script src="btnscript.js"></script>
+
+            <button class="oulubtn" onclick="javascript:closeInfoWindow();
+             lista(2)" ;>Oulun alue</button>
+            <button class="kaupunkibtn" onclick="javascript:closeInfoWindow();
+            lista(0)" ;>Kaupunkialue</button>
+            <button class="kampusbtn" onclick="javascript:closeInfoWindow();
+            lista(1)" ;>Kampusalue</button>
+
+            <button class="oulubtneng" style="display:none" type="button"
+                onclick=javascript:closeInfoWindow();lista(4);>Oulu area</button>
+            <button class="kaupunkibtneng" style="display:none" onclick="javascript:closeInfoWindow();
+            lista(5)" ;>City
+                area</button>
+            <button class="kampusbtneng" style="display:none" onclick="javascript:closeInfoWindow();
+            lista(6)" ;>Campus
+                area</button>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h4 id="modhead">Modal Header</h4>
+                </div>
+                <div class="modal-quiz">
+                    <p id="instructions" style="display:none">Visassa on yksi kysymys jokaisesta sovelluksessa
+                        esitellystä paikasta. Voit tutustua kohteisiin ennen visan tekemistä tai kokeilla onneasi.
+                        Kohteiden esittelyt eivät kerro suoraan oikeita vastauksia visaan, mutta niistä voi olla
+                        apua.<br><br>
+                        Täysillä pisteillä suoritetusta visasta voit saada fuksipisteitä. Koska uskomme oppimisen
+                        voimaan, saa visan tehdä niin monta kertaa kuin haluat. Visa ei kuitenkaan suoraan paljasta
+                        oikeita vastauksia. Tutorisi kirjaa fuksipisteesi ylös, kun lähetät hänelle ruutukaappauksen
+                        tuloksestasi.</p>
+                    <p2 id="quiz"></p2>
+                    <p2 id="results"></p2>
+                </div>
+                <div class="modal-footer">
+                    <button id="vastausbtn" onclick="" ;>Tarkista</button>
+                    <button id="vastausbtneng" style="display:none" onclick="" ;>Grade quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menuWrapper">
+            <div class="scrollmenu">
+                <a href="#" class="kaupunki" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(3);
+                    javascript:loadMap.openWindowOnBtn('paskaKaupunni');return false;">Paskakaupunni</a>
+                <a href="#" class="kaupunki" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(4);
+                    javascript:loadMap.openWindowOnBtn('toriPoliisi');return false;">Toripoliisi</a>
+                <a href="#" class="kaupunki" ; onclick="javascript:closeInfoWindow();javascript:redirect(6);
+                    javascript:loadMap.openWindowOnBtn('valkea');return false;">Valkea</a>
+                <a href="#" class="kaupunki" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(7);
+                    javascript:loadMap.openWindowOnBtn('kauppaTori');return false;">Kauppatori</a>
+                <a href="#" class="kaupunki" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(9);
+                    javascript:loadMap.openWindowOnBtn('rotuaari');return false;">Rotuaari</a>
+                <a href="#" class="kampus" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(1);
+                    javascript:loadMap.openWindowOnBtn('uniOulu');return false;">uniOulu</a>
+                <a href="#" class="kampus" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(10);
+                    javascript:loadMap.openWindowOnBtn('oamk');return false;">OAMK</a>
+                <a href="#" class="kampus" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(2);
+                    javascript:loadMap.openWindowOnBtn('kaijonHarju');return false;">Kaijonharju</a>
+                <a href="#" class="kampus" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(8);
+                    javascript:loadMap.openWindowOnBtn('teekkariTalo');return false;">Teekkaritalo</a>
+                <a href="#" class="kampus" ; onclick="javascript:closeInfoWindow();
+                javascript:redirect(5);
+                    javascript:loadMap.openWindowOnBtn('prisma');return false;">Prisma</a>
+                <a href="#" class="city" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(3);
+                    javascript:loadMap.openWindowOnBtn('paskaKaupunni');return false;">Paskakaupunni</a>
+                <a href="#" class="city" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(4);
+                    javascript:loadMap.openWindowOnBtn('toriPoliisi');return false;">The
+                    Bobby at the Market Place</a>
+                <a href="#" class="city" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(6);
+                    javascript:loadMap.openWindowOnBtn('valkea');return false;">Valkea</a>
+                <a href="#" class="city" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(7);
+                    javascript:loadMap.openWindowOnBtn('kauppaTori');return false;">Market
+                    Square</a>
+                <a href="#" class="city" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(9);
+                    javascript:loadMap.openWindowOnBtn('rotuaari');return false;">Rotuaari</a>
+                <a href="#" class="campus" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(1);
+                    javascript:loadMap.openWindowOnBtn('uniOulu');return false;">uniOulu</a>
+                <a href="#" class="campus" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(10);
+                    javascript:loadMap.openWindowOnBtn('oamk');return false;">Oulu
+                    University of Applied Sciences</a>
+                <a href="#" class="campus" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(2);
+                    javascript:loadMap.openWindowOnBtn('kaijonHarju');return false;">Kaijonharju</a>
+                <a href="#" class="campus" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(8);
+                    javascript:loadMap.openWindowOnBtn('teekkariTalo');return false;">Teekkaritalo</a>
+                <a href="#" class="campus" ; style="display:none" onclick="javascript:closeInfoWindow();
+                javascript:redirect(5);
+                    javascript:loadMap.openWindowOnBtn('prisma');return false;">Prisma</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <div id="map">
+        <script src="map.js"></script>
+        <script src="quiz.js"></script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=SECRET_API_KEY&callback=open&libraries=&v=weekly"
+            async></script>
+    </div>
+
+</body>
+
+</html>
